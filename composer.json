@@ -14,8 +14,8 @@
     },
     "require": {
         "php": ">=7.3",
-        "zendframework/zend-escaper": "^2.5",
-        "zendframework/zend-validator": "^2.5"
+        "acbjtechnology/zend-escaper-25": "@dev",
+        "acbjtechnology/zend-validator-25": "@dev"
     },
     "extra": {
         "branch-alias": {
@@ -27,5 +27,41 @@
         "psr-4": {
             "ZendTest\\Uri\\": "test/"
         }
-    }
+    },
+    "repositories" : [
+        {
+            "type":"package",
+            "package": {
+                "name": "acbjtechnology/zend-escaper-25",
+                "version":"dev-main",
+                "source": {
+                    "url": "https://github.com/acbjtechnology/zend-escaper-25.git",
+                    "type": "git",
+                    "reference":"52-2-1-dev"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "Zend\\Escaper\\": "src/"
+                    }
+                }
+            }
+        },
+        {
+            "type":"package",
+            "package": {
+                "name": "acbjtechnology/zend-validator-25",
+                "version":"dev-main",
+                "source": {
+                    "url": "https://github.com/acbjtechnology/zend-validator-25.git",
+                    "type": "git",
+                    "reference":"main"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "Zend\\Validator\\": "src/"
+                    }
+                }
+            }
+        }
+    ]
 }
